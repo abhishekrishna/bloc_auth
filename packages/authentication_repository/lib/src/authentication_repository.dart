@@ -14,21 +14,17 @@ class AuthenticationRepository {
 
   final dio = Dio();
 
-  Future<void> logIn({
+  Future<void> signUp({
     required String username,
-    required String password,
   }) async {
     print("fire function");
     //call backend api
     var response = await dio.post(
-        'https://2f27-152-59-143-206.ngrok-free.app/auth/users',
+        'https://b975-2409-40e4-1093-332f-d5da-7a8a-535-419f.ngrok-free.app/auth/users',
         data: {'email': username});
     print(response.data);
-    print("fire function");
-    await Future.delayed(
-      const Duration(milliseconds: 300),
-      () => _controller.add(AuthenticationStatus.authenticated),
-    );
+
+    _controller.add(AuthenticationStatus.authenticated);
   }
 
   void logOut() {
