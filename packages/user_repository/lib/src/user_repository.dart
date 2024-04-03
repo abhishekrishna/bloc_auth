@@ -1,16 +1,22 @@
 import 'dart:async';
-
+import 'package:dio/dio.dart';
 import 'package:user_repository/src/models/models.dart';
-import 'package:uuid/uuid.dart';
 
 class UserRepository {
-  User? _user;
+  // User? _user;
 
-  Future<User?> getUser() async {
-    if (_user != null) return _user;
-    return Future.delayed(
-      const Duration(milliseconds: 300),
-      () => _user = User(const Uuid().v4()),
-    );
-  }
+  // final dio = Dio();
+
+  // Future<User> getUser(String id) async {
+  //   try {
+  //     Response response = await dio.get(
+  //         'https://b975-2409-40e4-1093-332f-d5da-7a8a-535-419f.ngrok-free.app/user/$id');
+  //     // Handle response here
+  //     print(response.data); // Or do whatever you need with the response data
+  //     return response.data;
+  //   } catch (error, stacktrace) {
+  //     // Handle error here
+  //     print("Exception occurred: $error stackTrace: $stacktrace");
+  //   }
+  // }
 }

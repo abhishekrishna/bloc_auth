@@ -7,6 +7,7 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
+  shared_preferences: ^2.0.18
   authentication_repository:
     path: packages/authentication_repository
   bloc: ^8.1.0
@@ -26,3 +27,23 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/onboard/
+    - assets/Icon/
+    - assets/Icon/20x20/
+    - assets/Vector/
+
+  fonts:
+    - family: PoppinsReg
+      fonts:
+        - asset: fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: fonts/Poppins-SemiBold.ttf
+          weight: 600
+    - family: AppIcons
+      fonts:
+        - asset: icons/AppIcons.ttf
